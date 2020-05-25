@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research | Xingdong Zuo</title>
+    <link>https://zuoxingdong.github.io/tag/research/</link>
+      <atom:link href="https://zuoxingdong.github.io/tag/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 02:02:51 +0200</lastBuildDate>
+    <image>
+      <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>research</title>
+      <link>https://zuoxingdong.github.io/tag/research/</link>
+    </image>
+    
+    <item>
+      <title>Productivity Tricks in Machine Learning</title>
+      <link>https://zuoxingdong.github.io/post/productivity-tricks-in-machine-learning/</link>
+      <pubDate>Mon, 25 May 2020 02:02:51 +0200</pubDate>
+      <guid>https://zuoxingdong.github.io/post/productivity-tricks-in-machine-learning/</guid>
+      <description>&lt;p&gt;In machine learning research, one often needs to run many experiments in parallel e.g. hyperparameter search. In this post, we gather some useful tricks in one place for better productivity.&lt;/p&gt;
+&lt;h2 id=&#34;environment-setup&#34;&gt;Environment setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Miniconda&lt;/li&gt;
+&lt;li&gt;JupyterLab&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;~/.vimrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;passwd&lt;/code&gt;: change user password on the server&lt;/li&gt;
+&lt;li&gt;SSH access to server via JupyterLab 
+&lt;a href=&#34;https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;see also here&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;On server: &lt;code&gt;$ jupyter lab --no-browser --port=8000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;On local: &lt;code&gt;$ ssh -N -L localhost:8001:loacalhost:8000 user@remote_host&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-N&lt;/code&gt;: specifies SSH that no remote commands to be executed&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-L&lt;/code&gt;: port forwarding&lt;/li&gt;
+&lt;li&gt;Kill port: &lt;code&gt;fuser -k 8000/tcp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xvfb&lt;/code&gt;: fake-screen on the server
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;xvfb-run -a -s “-screen 0 1400x900x24 +extension RANDR&amp;quot; --python file.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Note: it requires nvidia driver installed with flag &lt;code&gt;--no-opengl-files` and CUDA installed with flag &lt;/code&gt;&amp;ndash;no-opengl-libs`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Get user’s memory utilization:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ps -U user_name --no-headers -o rss | awk &#39;{sum+=$1} END {print int(sum/1024/1024) &amp;quot;GB&amp;quot;}&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;some-tools&#34;&gt;Some tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;htop&lt;/code&gt; : CPU monitoring&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpustat&lt;/code&gt; : GPU monitoring. On top of nvidia-sim with better visualization&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;terminator&lt;/code&gt; : group all opened terminals in one place&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flake8&lt;/code&gt; : check your Python code quality with PEP8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;misc&#34;&gt;Misc&lt;/h2&gt;
+&lt;p&gt;GitHub repo clean-up about large historical files: reference link&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find large items (20 largest):
+&lt;code&gt;git verify-pack -v .git/objects/pack/pack-{hash}.idx | sort -k 3 -n | tail -n 20&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;View the large pack object:
+&lt;code&gt;git rev-list --objects --all | grep {hash}{hash} path/file.ext&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Branch filtering:
+&lt;code&gt;git filter-branch --index-filter &#39;git rm --cached --ignore-unmatch ./path/*.ext&#39; --tag-name-filter cat -- --all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Push:
+&lt;code&gt;git push origin --force --all&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GitHub repo image host: use imgur, so you don’t need to upload it to the repo.&lt;/p&gt;
+&lt;p&gt;Use keyboard shortcuts as much as possible: GNOME, Browser (Chrome), Jupyterlab …&lt;/p&gt;
+&lt;p&gt;Experiment parallelization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make hyperparameter configuration as a dictionary (one could use some function to generate a list of dict for sweeping)&lt;/li&gt;
+&lt;li&gt;Use ProcessPoolExecutor or existing libraries (e.g. Ray, lagom) to execute a run function in parallel, each for one configuration dictionary.&lt;/li&gt;
+&lt;li&gt;Discouraged to use command line arguments (xargs), because this would increase the code complexity and also less convenient to change settings for hyperparameter, parallelizations etc.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

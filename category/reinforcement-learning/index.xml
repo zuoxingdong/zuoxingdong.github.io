@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reinforcement learning | Xingdong Zuo</title>
+    <link>https://zuoxingdong.github.io/category/reinforcement-learning/</link>
+      <atom:link href="https://zuoxingdong.github.io/category/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>reinforcement learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>reinforcement learning</title>
+      <link>https://zuoxingdong.github.io/category/reinforcement-learning/</link>
+    </image>
+    
+    <item>
+      <title>MazeLab</title>
+      <link>https://zuoxingdong.github.io/project/mazelab/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/project/mazelab/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

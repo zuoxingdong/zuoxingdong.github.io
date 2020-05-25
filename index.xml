@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xingdong Zuo</title>
+    <link>https://zuoxingdong.github.io/</link>
+      <atom:link href="https://zuoxingdong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xingdong Zuo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Xingdong Zuo</title>
+      <link>https://zuoxingdong.github.io/</link>
+    </image>
+    
+    <item>
+      <title>Ergonomic Desk and Chair</title>
+      <link>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</link>
+      <pubDate>Mon, 25 May 2020 02:27:01 +0200</pubDate>
+      <guid>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</guid>
+      <description>&lt;p&gt;We all know that a healthy lifestyle could enable us to work much more efficiently and keep being creative. For machine learning researchers, a good health management could be even more important because many of us often have to sit quite long time on the chair. The major motivation of this post is to collect a few useful tips to maintain a good health status.&lt;/p&gt;
+&lt;p&gt;Keep in mind that all infrastructures should aim for fitting the people, but not the other way around.
+Monitors: a good setup of monitors can help to reduce the risks of neck injury or even cervical spondylosis.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dual monitors: 1 horizontal (browsing)+ 1 vertical (coding)&lt;/li&gt;
+&lt;li&gt;Positioning: One arm distance (45–70 cm) / Good height which neck should be straight, relaxed with neutral posture (e.g. extra height with A4 paper bundles) / touched edge of two monitors aligned with nose, it has semi-circle angle
+NO sedentary: stand up for a break every 20 minutes, relax the eye muscles by focusing on somewhere far away with green space
+Addicted to whiteboard: sketching ideas, equation-related stuffs should happen on whiteboard as much as possible, good for your neck and health in general
+Use reading holders: keep your vertebral and neck straight up during reading, not downward.&lt;/li&gt;
+&lt;li&gt;Thick textbook: disassemble into chapters and rebind them on the leftmost column for two bindings, like a small leaflet.
+Use ergonomic keyboard: open elbow with 90 deg /forearms on the table / shoulder relaxed
+Use ergonomic chair: curvature to support back / relax shoulder / place hips as close to the back of the chair as possible / adjust height for relaxed feet and legs&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Productivity Tricks in Machine Learning</title>
+      <link>https://zuoxingdong.github.io/post/productivity-tricks-in-machine-learning/</link>
+      <pubDate>Mon, 25 May 2020 02:02:51 +0200</pubDate>
+      <guid>https://zuoxingdong.github.io/post/productivity-tricks-in-machine-learning/</guid>
+      <description>&lt;p&gt;In machine learning research, one often needs to run many experiments in parallel e.g. hyperparameter search. In this post, we gather some useful tricks in one place for better productivity.&lt;/p&gt;
+&lt;h2 id=&#34;environment-setup&#34;&gt;Environment setup&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Miniconda&lt;/li&gt;
+&lt;li&gt;JupyterLab&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Modify &lt;code&gt;~/.vimrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;passwd&lt;/code&gt;: change user password on the server&lt;/li&gt;
+&lt;li&gt;SSH access to server via JupyterLab 
+&lt;a href=&#34;https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;see also here&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;On server: &lt;code&gt;$ jupyter lab --no-browser --port=8000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;On local: &lt;code&gt;$ ssh -N -L localhost:8001:loacalhost:8000 user@remote_host&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-N&lt;/code&gt;: specifies SSH that no remote commands to be executed&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-L&lt;/code&gt;: port forwarding&lt;/li&gt;
+&lt;li&gt;Kill port: &lt;code&gt;fuser -k 8000/tcp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xvfb&lt;/code&gt;: fake-screen on the server
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;xvfb-run -a -s “-screen 0 1400x900x24 +extension RANDR&amp;quot; --python file.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Note: it requires nvidia driver installed with flag &lt;code&gt;--no-opengl-files` and CUDA installed with flag &lt;/code&gt;&amp;ndash;no-opengl-libs`&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Get user’s memory utilization:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ps -U user_name --no-headers -o rss | awk &#39;{sum+=$1} END {print int(sum/1024/1024) &amp;quot;GB&amp;quot;}&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;some-tools&#34;&gt;Some tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;htop&lt;/code&gt; : CPU monitoring&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpustat&lt;/code&gt; : GPU monitoring. On top of nvidia-sim with better visualization&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;terminator&lt;/code&gt; : group all opened terminals in one place&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flake8&lt;/code&gt; : check your Python code quality with PEP8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;misc&#34;&gt;Misc&lt;/h2&gt;
+&lt;p&gt;GitHub repo clean-up about large historical files: reference link&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find large items (20 largest):
+&lt;code&gt;git verify-pack -v .git/objects/pack/pack-{hash}.idx | sort -k 3 -n | tail -n 20&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;View the large pack object:
+&lt;code&gt;git rev-list --objects --all | grep {hash}{hash} path/file.ext&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Branch filtering:
+&lt;code&gt;git filter-branch --index-filter &#39;git rm --cached --ignore-unmatch ./path/*.ext&#39; --tag-name-filter cat -- --all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Push:
+&lt;code&gt;git push origin --force --all&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GitHub repo image host: use imgur, so you don’t need to upload it to the repo.&lt;/p&gt;
+&lt;p&gt;Use keyboard shortcuts as much as possible: GNOME, Browser (Chrome), Jupyterlab …&lt;/p&gt;
+&lt;p&gt;Experiment parallelization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make hyperparameter configuration as a dictionary (one could use some function to generate a list of dict for sweeping)&lt;/li&gt;
+&lt;li&gt;Use ProcessPoolExecutor or existing libraries (e.g. Ray, lagom) to execute a run function in parallel, each for one configuration dictionary.&lt;/li&gt;
+&lt;li&gt;Discouraged to use command line arguments (xargs), because this would increase the code complexity and also less convenient to change settings for hyperparameter, parallelizations etc.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://zuoxingdong.github.io/page-projects/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/page-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MazeLab</title>
+      <link>https://zuoxingdong.github.io/project/mazelab/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/project/mazelab/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Numerical Simulation of Asano-Khrennikov-Ohya Quantum-like Decision Making Model.</title>
+      <link>https://zuoxingdong.github.io/publication/neuroquantology14/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/publication/neuroquantology14/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
