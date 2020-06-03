@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://zuoxingdong.github.io/categories/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
@@ -34,7 +34,12 @@
   
   <url>
     <loc>https://zuoxingdong.github.io/tags/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zuoxingdong.github.io/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
@@ -53,42 +58,47 @@
   </url>
   
   <url>
-    <loc>https://zuoxingdong.github.io/page-projects/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zuoxingdong.github.io/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zuoxingdong.github.io/project/mazelab/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <loc>https://zuoxingdong.github.io/project/dm2gym/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://zuoxingdong.github.io/project/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zuoxingdong.github.io/projects/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://zuoxingdong.github.io/tag/reinforcement-learning/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://zuoxingdong.github.io/category/reinforcement-learning/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://zuoxingdong.github.io/tag/software/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://zuoxingdong.github.io/category/software/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zuoxingdong.github.io/project/lagom/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zuoxingdong.github.io/project/mazelab/</loc>
     <lastmod>2020-05-25T14:45:58+02:00</lastmod>
   </url>
   
@@ -124,7 +134,12 @@
   
   <url>
     <loc>https://zuoxingdong.github.io/post/</loc>
-    <lastmod>2020-05-25T14:45:58+02:00</lastmod>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zuoxingdong.github.io/category_index/</loc>
+    <lastmod>2020-06-03T13:04:45+02:00</lastmod>
   </url>
   
   <url>

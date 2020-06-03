@@ -5,7 +5,7 @@
     <link>https://zuoxingdong.github.io/</link>
       <atom:link href="https://zuoxingdong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Xingdong Zuo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 02:27:01 +0200</lastBuildDate>
     <image>
       <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Xingdong Zuo</title>
@@ -102,11 +102,29 @@ Use ergonomic chair: curvature to support back / relax shoulder / place hips as 
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://zuoxingdong.github.io/page-projects/</link>
+      <title>dm2gym</title>
+      <link>https://zuoxingdong.github.io/project/dm2gym/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://zuoxingdong.github.io/page-projects/</guid>
+      <guid>https://zuoxingdong.github.io/project/dm2gym/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://zuoxingdong.github.io/projects/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/projects/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>lagom</title>
+      <link>https://zuoxingdong.github.io/project/lagom/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/project/lagom/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;
+</description>
     </item>
     
     <item>
