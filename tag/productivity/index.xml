@@ -5,7 +5,7 @@
     <link>https://zuoxingdong.github.io/tag/productivity/</link>
       <atom:link href="https://zuoxingdong.github.io/tag/productivity/index.xml" rel="self" type="application/rss+xml" />
     <description>productivity</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 02:27:01 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>productivity</title>
@@ -13,23 +13,12 @@
     </image>
     
     <item>
-      <title>Ergonomic Desk and Chair</title>
-      <link>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</link>
-      <pubDate>Mon, 25 May 2020 02:27:01 +0200</pubDate>
-      <guid>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</guid>
-      <description>&lt;p&gt;We all know that a healthy lifestyle could enable us to work much more efficiently and keep being creative. For machine learning researchers, a good health management could be even more important because many of us often have to sit quite long time on the chair. The major motivation of this post is to collect a few useful tips to maintain a good health status.&lt;/p&gt;
-&lt;p&gt;Keep in mind that all infrastructures should aim for fitting the people, but not the other way around.
-Monitors: a good setup of monitors can help to reduce the risks of neck injury or even cervical spondylosis.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Dual monitors: 1 horizontal (browsing)+ 1 vertical (coding)&lt;/li&gt;
-&lt;li&gt;Positioning: One arm distance (45–70 cm) / Good height which neck should be straight, relaxed with neutral posture (e.g. extra height with A4 paper bundles) / touched edge of two monitors aligned with nose, it has semi-circle angle
-NO sedentary: stand up for a break every 20 minutes, relax the eye muscles by focusing on somewhere far away with green space
-Addicted to whiteboard: sketching ideas, equation-related stuffs should happen on whiteboard as much as possible, good for your neck and health in general
-Use reading holders: keep your vertebral and neck straight up during reading, not downward.&lt;/li&gt;
-&lt;li&gt;Thick textbook: disassemble into chapters and rebind them on the leftmost column for two bindings, like a small leaflet.
-Use ergonomic keyboard: open elbow with 90 deg /forearms on the table / shoulder relaxed
-Use ergonomic chair: curvature to support back / relax shoulder / place hips as close to the back of the chair as possible / adjust height for relaxed feet and legs&lt;/li&gt;
-&lt;/ul&gt;
+      <title>ClickUp</title>
+      <link>https://zuoxingdong.github.io/post/2020-06-19-clickup/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/post/2020-06-19-clickup/</guid>
+      <description>&lt;h4 id=&#34;the-hard-exploration-problem&#34;&gt;&lt;strong&gt;The Hard-Exploration Problem&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The “hard-exploration” problem refers to exploration in an environment with very sparse or even deceptive reward. It is difficult because random exploration in such scenarios can rarely discover successful states or obtain meaningful feedback.&lt;/p&gt;
 </description>
     </item>
     
@@ -97,6 +86,27 @@ Use ergonomic chair: curvature to support back / relax shoulder / place hips as 
 &lt;li&gt;Make hyperparameter configuration as a dictionary (one could use some function to generate a list of dict for sweeping)&lt;/li&gt;
 &lt;li&gt;Use ProcessPoolExecutor or existing libraries (e.g. Ray, lagom) to execute a run function in parallel, each for one configuration dictionary.&lt;/li&gt;
 &lt;li&gt;Discouraged to use command line arguments (xargs), because this would increase the code complexity and also less convenient to change settings for hyperparameter, parallelizations etc.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ergonomics as a Machine Learner</title>
+      <link>https://zuoxingdong.github.io/post/2020-05-25-ergonomics-as-a-machine-learner/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/post/2020-05-25-ergonomics-as-a-machine-learner/</guid>
+      <description>&lt;p&gt;We all know that a healthy lifestyle could enable us to work much more efficiently and keep being creative. For machine learning researchers, a good health management could be even more important because many of us often have to sit quite long time on the chair. The major motivation of this post is to collect a few useful tips to maintain a good health status.&lt;/p&gt;
+&lt;p&gt;Keep in mind that all infrastructures should aim for fitting the people, but not the other way around.
+Monitors: a good setup of monitors can help to reduce the risks of neck injury or even cervical spondylosis.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dual monitors: 1 horizontal (browsing)+ 1 vertical (coding)&lt;/li&gt;
+&lt;li&gt;Positioning: One arm distance (45–70 cm) / Good height which neck should be straight, relaxed with neutral posture (e.g. extra height with A4 paper bundles) / touched edge of two monitors aligned with nose, it has semi-circle angle
+NO sedentary: stand up for a break every 20 minutes, relax the eye muscles by focusing on somewhere far away with green space
+Addicted to whiteboard: sketching ideas, equation-related stuffs should happen on whiteboard as much as possible, good for your neck and health in general
+Use reading holders: keep your vertebral and neck straight up during reading, not downward.&lt;/li&gt;
+&lt;li&gt;Thick textbook: disassemble into chapters and rebind them on the leftmost column for two bindings, like a small leaflet.
+Use ergonomic keyboard: open elbow with 90 deg /forearms on the table / shoulder relaxed
+Use ergonomic chair: curvature to support back / relax shoulder / place hips as close to the back of the chair as possible / adjust height for relaxed feet and legs&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

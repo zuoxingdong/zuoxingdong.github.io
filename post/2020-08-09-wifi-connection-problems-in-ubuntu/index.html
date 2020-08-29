@@ -1,0 +1,1198 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Xingdong Zuo">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Recently, I switched to a new WiFi provider. The connection is powered by a SIM card instead of a DSL cable. For this reason, I need a new WiFi router. However, my laptop is unable to connect to the router.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/solarized-dark.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/solarized-dark.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CNoto+Sans:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Xingdong Zuo">
+  <meta property="og:url" content="https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/">
+  <meta property="og:title" content="WiFi connection problems in Ubuntu 20.04 | Xingdong Zuo">
+  <meta property="og:description" content="Recently, I switched to a new WiFi provider. The connection is powered by a SIM card instead of a DSL cable. For this reason, I need a new WiFi router. However, my laptop is unable to connect to the router."><meta property="og:image" content="https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-08-09T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-08-29T15:35:26&#43;02:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/"
+  },
+  "headline": "WiFi connection problems in Ubuntu 20.04",
+  
+  "datePublished": "2020-08-09T00:00:00Z",
+  "dateModified": "2020-08-29T15:35:26+02:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Xingdong Zuo"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Xingdong Zuo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Recently, I switched to a new WiFi provider. The connection is powered by a SIM card instead of a DSL cable. For this reason, I need a new WiFi router. However, my laptop is unable to connect to the router."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>WiFi connection problems in Ubuntu 20.04 | Xingdong Zuo</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Xingdong Zuo</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Xingdong Zuo</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/category_index/"><span>Category Index</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="d-none d-xl-block col-xl-2 docs-toc">
+            <ul class="nav toc-top">
+                <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+            </ul>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#geek-time"><strong>Geek Time!</strong></a>
+      <ul>
+        <li><a href="#what-is-wifi">What is WiFi?</a></li>
+        <li><a href="#how-signal-transmission-works">How signal transmission works?</a></li>
+        <li><a href="#frequency-bands-and-channels">Frequency bands and channels</a></li>
+        <li><a href="#interference">Interference</a></li>
+        <li><a href="#misc">Misc</a></li>
+      </ul>
+    </li>
+    <li><a href="#references"><strong>References</strong></a></li>
+  </ul>
+</nav>
+            
+        </div>
+        <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>WiFi connection problems in Ubuntu 20.04</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Aug 29, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/tech/">tech</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+                <div class="article-container">
+                    <div class="article-style">
+                        <p>Recently, I switched to a new WiFi provider. The connection is powered by a SIM card instead of a DSL cable. For this reason, I need a new WiFi router. However, my laptop is unable to connect to the router. It keeps asking the password for authentication even if it is correctly entered.</p>
+<p>Initially, I thought there might be something wrong with the router itself. But the problem remains after trying to reboot the router and changing the password to a new one. I also tried to change the security protocol from WPA2 Personal to WPA, but nothing works.</p>
+<p>It turns out that this issue only happens with my laptop that runs Ubuntu 20.04.1 LTS. The WiFi connection works perfectly on my Android phone, MacBook, and also on Windows 10.</p>
+<p>So it is clear that the problem is about the network manager on Ubuntu. One simple thing to do is to restart the service of the network manager. After running the following command, it remains the same.</p>
+<pre><code class="language-shell">$ sudo service network-manager restart
+</code></pre>
+<p><strong>Solution</strong></p>
+<p>It took me almost 2 hours to try out different settings of the connection. I noticed that the router only supports the frequency band: 2.4 GHz. But I cannot find such a setting on the GUI of the network manager. By googling it, I need to set it up in the connection editor. Here are the steps:</p>
+<ol>
+<li>Press <code>Alt+F2</code> to open &ldquo;Run a Command&rdquo; box and type <code>nm-connection-editor</code></li>
+<li>Open the setting of the corresponding WiFi connection</li>
+<li>Change the Band option from <code>Automatic</code> to <code>B/G (2.4 GHz)</code></li>
+</ol>
+<p>Now the WiFi works fine on my Ubuntu laptop.</p>
+<p>I guess the reason might be that the network manager prioritizes 5 GHz over 2.4 GHz in the automatic setting.</p>
+<h2 id="geek-time"><strong>Geek Time!</strong></h2>
+<p>I always believe that contextual learning is an efficient way to acquire and retain knowledge actively. So, let&rsquo;s start learning some basic concepts about WiFi.</p>
+<h3 id="what-is-wifi">What is WiFi?</h3>
+<p>
+<a href="https://en.wikipedia.org/wiki/Wi-Fi" target="_blank" rel="noopener"><strong>WiFi</strong></a> stands for <strong>Wi</strong>reless <strong>Fi</strong>delity. It is often also referred as WLAN (wireless local area network). To send and receive signals wirelessly, continuous sine waves, so-called radio waves, are the medium for such transmissions. To be precise, <strong>radio waves</strong> are the electromagnetic waves with the frequencies from 30 Hz to 300 GHz.</p>
+<h3 id="how-signal-transmission-works">How signal transmission works?</h3>
+<p>Suppose we want to send information from laptop to internet. First, the wireless adapter in laptop translates the data (in bytes) to a radio signal and send it out via an antenna. Then, the wireless router receives the radio signal, decodes it, and sends the information to the internet.</p>
+<p>To avoid interference and to allocate resources for different needs, we could specify a certain range of radio wave frequencies for a specific use. 
+<a href="https://en.wikipedia.org/wiki/IEEE_802.11" target="_blank" rel="noopener">IEEE 802.11</a> standard defines several distinct radio frequency ranges for WiFi communications.</p>
+<h3 id="frequency-bands-and-channels">Frequency bands and channels</h3>
+<p>
+<a href="https://en.wikipedia.org/wiki/Hertz" target="_blank" rel="noopener">Hertz (Hz)</a> is the unit of frequency, defined as one cycle per second. Multiples are also commonly used:</p>
+<ul>
+<li>1 Kilohertz (kHz): $10^3$ Hz</li>
+<li>1 Megahertz (MHz): $10^6$ Hz</li>
+<li>1 Gigahertz (GHz):$10^9$ Hz</li>
+</ul>
+<p>For example, a radio wave with frequency of 5 GHz moves 5 billion cycles per second in the air!</p>
+<p>A small, continuous segment of the radio spectrum frequencies is called a <strong>radio band</strong>. A radio band can breakdown into smaller segments called <strong>channels</strong>.
+For example, in 2.4 GHz frequency band, there are 11 channels distributed within 100 MHz. Each channel is 20 MHz wide and the centers of the channels are separated by 5 MHz.
+There are 45 channels for 5 GHz frequency band.</p>
+<p>In theory, we expect a faster transmission speed from a higher frequency. Because more bits of information can be encoded within a unit time interval.
+However, on the other hand, the radio waves with lower frequencies are easier to penetrate solid objects such as walls and doors. As a result, they offer a wider coverage.
+When deciding to use either 2.4 GHz or 5 GHz for WiFi, we need to trade-off between speed and coverage. Let us summarize these properties in the following table:</p>
+<div style="display:table;margin-left:auto;margin-right:auto;">
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Speed</th>
+<th align="center">Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2.4 GHz</td>
+<td align="center">✖️</td>
+<td align="center">✔️</td>
+</tr>
+<tr>
+<td align="center">5 GHz</td>
+<td align="center">✔️</td>
+<td align="center">✖️</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="interference">Interference</h3>
+<p>There are two types of interference:</p>
+<ol>
+<li><strong>Adjacent-channel interference</strong>: the adjacent channels overlap with one another.</li>
+<li><strong>Co-channel interference</strong>: multiple devices are competing in the same channel.</li>
+</ol>
+<p>To reduce adjacent-channel intereference, it can be a good idea to use non-overlapping channels. For example, the channels 1, 6, 11 are non-overlapping in 2.4 GHz. This can be simply calculated from how each channel is distributed. For 5 GHz, there are 24 non-overlapping channels.
+However, when there are too many devices trying to use those non-overlapping channels, it may rise to co-channel interference. Therefore, it is preferred to use 5 GHz over 2.4 GHz when we expect to use a large number of wireless devices at the same time.</p>
+<h3 id="misc">Misc</h3>
+<p>It can be convenient to monitor the status of wireless network. I found a great tool called 
+<a href="https://github.com/uoaerg/wavemon" target="_blank" rel="noopener">wavemon</a> which provides information such as signal/noise levels, packet statistics, device configuration, network parameters, etc.</p>
+<p>Run the following command to install wavemon:</p>
+<pre><code class="language-shell">$ sudo apt install wavemon
+</code></pre>
+<hr>
+<p>Cited as:</p>
+<pre><code class="language-tex">@article{zuo2020wifi,
+  title={WiFi connection problems in Ubuntu 20.04},
+  author={Zuo, Xingdong},
+  journal={zuoxingdong.github.io/post},
+  year={2020},
+  url={https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu}
+}
+</code></pre>
+<hr>
+<h2 id="references"><strong>References</strong></h2>
+<p>[1] Marshall Brain, et al. 
+<a href="https://computer.howstuffworks.com/wireless-network.htm" target="_blank" rel="noopener">&ldquo;How WiFi Works&rdquo;</a>. HowStuffWorks</p>
+
+                    </div>
+                    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/wifi/">wifi</a>
+  
+  <a class="badge badge-light" href="/tag/troubleshooting/">troubleshooting</a>
+  
+  <a class="badge badge-light" href="/tag/ubuntu/">ubuntu</a>
+  
+  <a class="badge badge-light" href="/tag/network/">network</a>
+  
+  <a class="badge badge-light" href="/tag/tech/">tech</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/&amp;text=WiFi%20connection%20problems%20in%20Ubuntu%2020.04" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/&amp;t=WiFi%20connection%20problems%20in%20Ubuntu%2020.04" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=WiFi%20connection%20problems%20in%20Ubuntu%2020.04&amp;body=https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/&amp;title=WiFi%20connection%20problems%20in%20Ubuntu%2020.04" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=WiFi%20connection%20problems%20in%20Ubuntu%2020.04%20https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://zuoxingdong.github.io/post/2020-08-09-wifi-connection-problems-in-ubuntu/&amp;title=WiFi%20connection%20problems%20in%20Ubuntu%2020.04" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/xingdong-zuo/avatar_hu3ee1647086250a3e329467e3e2823cb2_159517_270x270_fill_q90_lanczos_center.jpg" alt="Xingdong Zuo">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://zuoxingdong.github.io/">Xingdong Zuo</a></h5>
+        <h6 class="card-subtitle">Machine Learning Engineer</h6>
+        <p class="card-text">My research interests include causal inference, counterfactual reasoning and model-based planning in reinforcement learning.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zuoxingdong" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/zuoxingdong" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/XingdongZ" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+                </div>
+            </article>
+
+        </main>
+    </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/bash.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/shell.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/tex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

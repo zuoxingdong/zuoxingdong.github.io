@@ -5,7 +5,7 @@
     <link>https://zuoxingdong.github.io/category/health/</link>
       <atom:link href="https://zuoxingdong.github.io/category/health/index.xml" rel="self" type="application/rss+xml" />
     <description>health</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 02:27:01 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://zuoxingdong.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>health</title>
@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>Ergonomic Desk and Chair</title>
-      <link>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</link>
-      <pubDate>Mon, 25 May 2020 02:27:01 +0200</pubDate>
-      <guid>https://zuoxingdong.github.io/post/ergonomic-desk-and-chair/</guid>
+      <title>Ergonomics as a Machine Learner</title>
+      <link>https://zuoxingdong.github.io/post/2020-05-25-ergonomics-as-a-machine-learner/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://zuoxingdong.github.io/post/2020-05-25-ergonomics-as-a-machine-learner/</guid>
       <description>&lt;p&gt;We all know that a healthy lifestyle could enable us to work much more efficiently and keep being creative. For machine learning researchers, a good health management could be even more important because many of us often have to sit quite long time on the chair. The major motivation of this post is to collect a few useful tips to maintain a good health status.&lt;/p&gt;
 &lt;p&gt;Keep in mind that all infrastructures should aim for fitting the people, but not the other way around.
 Monitors: a good setup of monitors can help to reduce the risks of neck injury or even cervical spondylosis.&lt;/p&gt;
