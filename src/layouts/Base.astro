@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+    />
+    <script is:inline>
+      // Set theme before first paint to avoid a flash.
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const theme =
+          stored ??
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <span class="site-mark"><a href="/">~/zuoxingdong</a></span>
+      <button
+        class="theme-toggle"
+        aria-label="Toggle color theme"
+        onclick="const h = document.documentElement; h.dataset.theme = h.dataset.theme === 'dark' ? 'light' : 'dark'; localStorage.setItem('theme', h.dataset.theme);"
+      >
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+        </svg>
+      </button>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <span>© 2026 Xingdong Zuo</span>
+      <span>
+        built with <a href="https://astro.build">astro</a> ·
+        <a href="https://github.com/zuoxingdong/zuoxingdong.github.io">source</a>
+      </span>
+    </footer>
+  </body>
+</html>

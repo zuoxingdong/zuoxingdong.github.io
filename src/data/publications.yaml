@@ -1,0 +1,103 @@
+# ============================================================
+# Publications, newest first. Adding a paper = one entry here.
+#
+# Fields:
+#   title     required
+#   authors   required — your own name is automatically bolded
+#   venue     required (journal/conference + year info shown as-is)
+#   year      required (used for sorting sanity, shown in venue line)
+#   links     optional map, rendered in order: paper / code / project page / ...
+#   abstract  optional — collapsible on the page
+#   bibtex    optional — collapsible on the page
+#   selected  optional (default true) — reserved for a future
+#             "selected / all" toggle once the list grows
+# ============================================================
+
+- title: Constrained Auto-Bidding via Generative Response Modeling
+  authors:
+    - Eunseok Yang
+    - Xingdong Zuo
+    - Kyung-Min Kim
+  venue: arXiv preprint
+  year: 2026
+  links:
+    paper: https://arxiv.org/abs/2605.27811
+  selected: true
+
+- title: "Drift-VLA: Fast Vision-Language-Action Policies with One-Step Drifting"
+  authors:
+    - Xingdong Zuo
+  venue: Preprint
+  year: 2026
+  links:
+    project page: https://zuoxingdong.github.io/drift-vla
+  selected: true
+
+- title: Method and System to Provide Information Data with Minimal Infrastructure Resources
+  authors:
+    - Xingdong Zuo
+    - et al.
+  venue: Korean Patent Publication No. 10-2025-0124713 (2025.08.20) · NAVER Corp
+  year: 2025
+  links:
+    patent: https://patents.google.com/patent/KR20250124713A/en
+  selected: false
+
+- title: HyperCLOVA X Technical Report
+  authors:
+    - HyperCLOVA X Team (incl. Xingdong Zuo)
+  venue: arXiv preprint
+  year: 2024
+  links:
+    paper: https://arxiv.org/abs/2404.01954
+  selected: true
+
+- title: Direct Preference-based Policy Optimization without Reward Modeling
+  authors:
+    - Gaon An
+    - Junhyeok Lee
+    - Xingdong Zuo
+    - Norio Kosaka
+    - Kyung-Min Kim
+    - Hyun Oh Song
+  venue: NeurIPS
+  year: 2023
+  links:
+    paper: https://arxiv.org/abs/2301.12842
+    code: https://github.com/snu-mllab/DPPO
+  bibtex: |
+    @inproceedings{an2023direct,
+      title={Direct Preference-based Policy Optimization without Reward Modeling},
+      author={An, Gaon and Lee, Junhyeok and Zuo, Xingdong and Kosaka, Norio and Kim, Kyung-Min and Song, Hyun Oh},
+      booktitle={Advances in Neural Information Processing Systems},
+      volume={36},
+      year={2023}
+    }
+  selected: true
+
+- title: Is Learning World Model Always Beneficial For Reinforcement Learning?
+  authors:
+    - Xingdong Zuo
+  venue: Technical report
+  year: 2021
+  links:
+    paper: http://dx.doi.org/10.13140/RG.2.2.33768.80641
+  selected: false
+
+- title: Numerical Simulation of Asano-Khrennikov-Ohya Quantum-like Decision Making Model
+  authors:
+    - Xingdong Zuo
+  venue: NeuroQuantology, 12(4)
+  year: 2014
+  links:
+    paper: https://www.researchgate.net/profile/Xingdong_Zuo/publication/279335043_Numerical_Simulation_of_Asano-Khrennikov-Ohya_Quantum-like_Decision_Making_Model/links/579fa93008ae94f454e7c049.pdf
+  bibtex: |
+    @article{zuo2014numerical,
+      title={Numerical Simulation of Asano-Khrennikov-Ohya Quantum-like Decision Making Model},
+      author={Zuo, Xingdong},
+      journal={NeuroQuantology},
+      volume={12},
+      number={4},
+      year={2014}
+    }
+  selected: false

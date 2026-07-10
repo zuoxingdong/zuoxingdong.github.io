@@ -1,0 +1,102 @@
+# ============================================================
+# Open-source projects. Adding one = one entry here.
+# Ordered by priority: major upstream contributions first, then
+# robotics / recent work, then by stars.
+# (Star counts are a snapshot — bump them occasionally.)
+# ============================================================
+
+- name: OpenAI Gym
+  url: https://github.com/openai/gym/pulls?q=is%3Apr+author%3Azuoxingdong+is%3Amerged
+  meta: contributor · 42 merged PRs
+  description: >-
+    Authored much of the standard wrapper suite — ClipAction, RescaleAction,
+    FrameStack/LazyFrames, GrayScaleObservation, ResizeObservation,
+    TransformObservation/Reward, FilterObservation, FlattenObservation,
+    RecordEpisodeStatistics, AtariPreprocessing — plus vectorized-environment
+    infrastructure. These wrappers live on in Gymnasium.
+
+- name: PyTorch
+  url: https://github.com/pytorch/pytorch/pulls?q=is%3Apr+author%3Azuoxingdong+is%3Amerged
+  meta: contributor
+  description: >-
+    Early core contributions, including the DataLoader drop_last flag and
+    nn.utils parameters_to_vector / vector_to_parameters.
+
+- name: LeRobot
+  url: https://github.com/huggingface/lerobot/pulls?q=is%3Apr+author%3Azuoxingdong+is%3Amerged
+  meta: contributor · Hugging Face
+  description: >-
+    Contributions to Hugging Face's robot-learning library, including
+    batched video encoding for faster dataset recording and the CLI for
+    launching LeKiwiHost.
+
+- name: lekiwi-tui
+  url: https://github.com/zuoxingdong/lekiwi-tui
+  meta: Python · LeRobot · new
+  description: >-
+    A terminal control center for the LeKiwi robot workflow, built with
+    LeRobot and pyratatui.
+
+- name: rlbidder
+  url: https://github.com/zuoxingdong/rlbidder
+  meta: Python · PyPI · new
+  description: >-
+    A modern, modular reinforcement learning library for auto-bidding —
+    a personal side project.
+
+- name: lagom
+  url: https://github.com/zuoxingdong/lagom
+  meta: Python · PyTorch · ★ 378
+  description: >-
+    A light PyTorch infrastructure for rapid prototyping of reinforcement
+    learning algorithms — modular building blocks for agents, environments,
+    and parallelized experiments.
+
+- name: MazeLab
+  url: https://github.com/zuoxingdong/mazelab
+  meta: Python · ★ 271
+  description: >-
+    A customizable framework to create maze and gridworld environments for
+    reinforcement learning, with a simple API for designing your own
+    layouts. Cited in academic papers as a benchmark environment.
+
+- name: VIN_PyTorch_Visdom
+  url: https://github.com/zuoxingdong/VIN_PyTorch_Visdom
+  meta: Python · PyTorch · ★ 223
+  description: >-
+    PyTorch implementation of Value Iteration Networks (NIPS 2016 best
+    paper), with live training visualization in Visdom.
+
+- name: dm2gym
+  url: https://github.com/zuoxingdong/dm2gym
+  meta: Python · ★ 87
+  description: >-
+    A thin wrapper that converts DeepMind Control Suite environments into
+    the OpenAI Gym interface.
+
+- name: DeepPILCO
+  url: https://github.com/zuoxingdong/DeepPILCO
+  meta: Python · PyTorch · ★ 54
+  description: >-
+    PyTorch implementation of "Improving PILCO with Bayesian Neural Network
+    Dynamics Models" — model-based RL with uncertainty-aware dynamics.
+
+- name: recsys_metrics
+  url: https://github.com/zuoxingdong/recsys_metrics
+  meta: Python · PyTorch · ★ 28
+  description: >-
+    An efficient PyTorch implementation of the evaluation metrics used in
+    recommender systems.
+
+- name: gym-recsys
+  url: https://github.com/zuoxingdong/gym-recsys
+  meta: Python · ★ 26
+  description: >-
+    A customizable recommender-system simulator exposed through the OpenAI
+    Gym interface, for training and evaluating RL-based recommenders.
+
+# An entry without `url` renders as a plain one-line footnote.
+- name: elsewhere
+  description: >-
+    Smaller merged patches in TensorFlow, OpenAI Baselines, Hugging Face
+    TRL, torchmetrics, and pytorch/examples.

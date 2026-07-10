@@ -1,0 +1,59 @@
+# ============================================================
+# Your identity & bio. Edit this file to update the intro.
+# HTML is allowed in `bio` paragraphs (links, <strong>, <em>).
+# ============================================================
+
+name: Xingdong Zuo
+avatar: /avatar.jpg
+
+bio:
+  - >-
+    I am a machine learning research engineer at
+    <a href="https://www.navercorp.com/en">NAVER</a>, where I apply
+    <strong>reinforcement learning</strong> to large-scale, real-world
+    decision making — <strong>recommender systems</strong> and
+    <strong>auto-bidding</strong> in online advertising auctions.
+  - >-
+    My research interests include <strong>offline RL</strong> for recommender
+    systems and auto-bidding, and robot learning with
+    <strong>vision-language-action (VLA) models</strong> and
+    <strong>world action models</strong>.
+  - >-
+    Before NAVER, I completed my M.Sc. in Machine Learning at the University
+    of Freiburg, Germany, and my B.Sc. in Applied Mathematics and Computer
+    Science at Linnaeus University, Sweden.
+
+# Link row under the bio. Remove an entry to hide it; order is kept.
+# TODO(xingdong): add a CV PDF (drop the file at public/cv.pdf and
+# uncomment the CV line).
+links:
+  - label: Email
+    url: mailto:xingdong.zuo@navercorp.com
+  # - label: CV
+  #   url: /cv.pdf
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=Fn3Jm7wAAAAJ
+  - label: GitHub
+    url: https://github.com/zuoxingdong
+  - label: Hugging Face
+    url: https://huggingface.co/zuoxingdong
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/zuoxingdong
+  - label: X
+    url: https://x.com/XingdongZ
+
+# `note` is optional and may contain HTML (e.g. a thesis link).
+education:
+  - degree: M.Sc. in Machine Learning
+    school: University of Freiburg, Germany
+    year: 2019
+    note: >-
+      Master's thesis at the Bosch Center for Artificial Intelligence (BCAI).
+  - degree: B.Sc. in Applied Mathematics & Computer Science
+    school: Linnaeus University, Sweden
+    year: 2015
+    note: >-
+      Thesis on the <a
+      href="https://lnu.diva-portal.org/smash/get/diva2:773923/fulltext01.pdf">Lindblad
+      equation for quantum-like decision-making models</a>, supervised by
+      Andrei Khrennikov.

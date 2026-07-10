@@ -1,0 +1,162 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import profile from '../data/profile.yaml';
+import publications from '../data/publications.yaml';
+import talks from '../data/talks.yaml';
+import projects from '../data/projects.yaml';
+import externalPosts from '../data/writing.yaml';
+
+const posts = await getCollection('blog');
+
+// Local blog posts and external articles, merged into one list by date.
+const writing = [
+  ...posts.map((p) => ({
+    title: p.data.title,
+    date: p.data.date,
+    href: `/blog/${p.id}/`,
+    external: false,
+  })),
+  ...externalPosts.map((e: { title: string; date: string; url: string }) => ({
+    title: e.title,
+    date: new Date(e.date),
+    href: e.url,
+    external: true,
+  })),
+].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+
+const fmt = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' });
+
+// Bold the site owner's name in author lists.
+const renderAuthors = (authors: string[]) =>
+  authors
+    .map((a) => (a === profile.name ? `<strong>${a}</strong>` : a))
+    .join(', ');
+---
+
+<Base
+  title="Xingdong Zuo"
+  description="Xingdong Zuo — machine learning researcher at NAVER. Reinforcement learning for recommender systems and auto-bidding in online advertising auctions."
+>
+  <div class="intro rise">
+    <div class="intro-text">
+      <h1 class="name">{profile.name}<span class="dot">.</span></h1>
+      {profile.bio.map((p: string) => <p set:html={p} />)}
+      <nav class="link-row">
+        {profile.links.map((l: { label: string; url: string }) => (
+          <a href={l.url}>{l.label}</a>
+        ))}
+      </nav>
+    </div>
+    <img
+      class="avatar"
+      src={profile.avatar}
+      alt={`Portrait of ${profile.name}`}
+      width="336"
+      height="336"
+    />
+  </div>
+
+  <section class="rise">
+    <div class="section-head"><h2>Publications</h2></div>
+    {publications.map((pub: any) => (
+      <article class="pub">
+        <h3 class="pub-title">
+          {pub.links?.paper ? (
+            <a href={pub.links.paper}>{pub.title}</a>
+          ) : (
+            pub.title
+          )}
+        </h3>
+        <p class="pub-authors" set:html={renderAuthors(pub.authors)} />
+        <p class="pub-venue">{pub.venue} · {pub.year}</p>
+        <div class="pub-links">
+          {Object.entries(pub.links ?? {}).map(([label, url], i) => (
+            <>
+              {i > 0 && <span class="sep">/</span>}
+              <a href={url as string}>{label}</a>
+            </>
+          ))}
+        </div>
+        {pub.abstract && (
+          <details>
+            <summary>abstract</summary>
+            <p>{pub.abstract}</p>
+          </details>
+        )}
+        {pub.bibtex && (
+          <details>
+            <summary>bibtex</summary>
+            <pre>{pub.bibtex.trim()}</pre>
+          </details>
+        )}
+      </article>
+    ))}
+  </section>
+
+  <section class="rise">
+    <div class="section-head"><h2>Talks &amp; Activities</h2></div>
+    {talks.map((t: any) => (
+      <article class="pub">
+        <h3 class="pub-title">
+          {t.links?.video ? <a href={t.links.video}>{t.title}</a> : t.title}
+        </h3>
+        {t.note && <p class="pub-authors">{t.note}</p>}
+        <p class="pub-venue">{t.venue} · {t.year}</p>
+        <div class="pub-links">
+          {Object.entries(t.links ?? {}).map(([label, url], i) => (
+            <>
+              {i > 0 && <span class="sep">/</span>}
+              <a href={url as string}>{label}</a>
+            </>
+          ))}
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="rise">
+    <div class="section-head"><h2>Open Source</h2></div>
+    {projects.map((p: any) => (
+      <article class="project">
+        <h3>
+          {p.url ? <a href={p.url}>{p.name}</a> : <span class="plain">{p.name}</span>}
+          {p.meta && <span class="meta">{p.meta}</span>}
+        </h3>
+        <p>{p.description}</p>
+      </article>
+    ))}
+  </section>
+
+  {writing.length > 0 && (
+    <section class="rise">
+      <div class="section-head"><h2>Writing</h2></div>
+      <ul class="post-list">
+        {writing.map((w) => (
+          <li>
+            <time datetime={w.date.toISOString()}>{fmt.format(w.date)}</time>
+            <a href={w.href}>
+              {w.title}
+              {w.external && <span class="ext">↗</span>}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section class="rise">
+    <div class="section-head"><h2>Education</h2></div>
+    <dl class="edu-list">
+      {profile.education.map((e: { degree: string; school: string; year: number; note?: string }) => (
+        <>
+          <dt>{e.year}</dt>
+          <dd>
+            {e.degree} · <span class="school">{e.school}</span>
+            {e.note && <div class="note" set:html={e.note} />}
+          </dd>
+        </>
+      ))}
+    </dl>
+  </section>
+</Base>

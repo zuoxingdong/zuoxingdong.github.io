@@ -1,0 +1,22 @@
+# ============================================================
+# Talks & activities, newest first. Adding one = one entry here.
+# Fields: title, venue, year, links (optional map), note (optional)
+# ============================================================
+
+- title: "Bid, Win, Profit: Revenue Optimization with a Generative-AI Ad-Auction Simulator"
+  venue: DAN 25 — NAVER Conference, Seoul
+  year: 2025
+  links:
+    video: https://www.youtube.com/watch?v=iD4FTmDay6Y&t=295s
+    slides: "https://dan.naver.com/data/deview/session/attach/[T4_17-00]%20Bid,%20Win,%20Profit-%20%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC%20AI%20%E1%84%80%E1%85%B5%E1%84%87%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%AA%E1%86%BC%E1%84%80%E1%85%A9%E1%84%80%E1%85%A7%E1%86%BC%E1%84%86%E1%85%A2%20%E1%84%89%E1%85%B5%E1%84%86%E1%85%B2%E1%86%AF%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%A9%20%E1%84%87%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%89%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%92%E1%85%AA_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%A7%E1%86%BC%E1%84%86%E1%85%B5%E1%86%AB_%E1%84%8B%E1%85%A3%E1%86%BC.pdf"
+
+- title: Hugging Face LeRobot Worldwide Hackathon
+  venue: Seoul
+  year: 2025
+  note: >-
+    Built LeRobokinson — a PD-gain tuning GUI for fixing shaky
+    Dynamixel-based robot arms — at the Seoul site of the worldwide
+    physical-AI hackathon.
+  links:
+    project: https://github.com/zuoxingdong/lerobokinson
+    recap video: https://www.youtube.com/watch?v=HgN0qIFSd8I&t=117s

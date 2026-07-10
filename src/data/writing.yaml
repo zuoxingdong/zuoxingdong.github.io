@@ -1,0 +1,12 @@
+# ============================================================
+# External articles (shown in Writing, merged with local blog
+# posts by date). Adding one = one entry here.
+# ============================================================
+
+- title: "SmolVLA on LIBERO-Spatial: Reproducible Evaluation Notes"
+  date: 2026-06-28
+  url: https://huggingface.co/blog/zuoxingdong/smolvla-libero-spatial-eval
+
+- title: Mobile Manipulation with LeKiwi and PincOpen
+  date: 2026-06-07
+  url: https://huggingface.co/blog/zuoxingdong/mobile-manipulation-lekiwi-pincopen
