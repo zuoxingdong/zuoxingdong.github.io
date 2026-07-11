@@ -202,15 +202,10 @@ h1.name .dot {
   text-decoration-color: var(--accent);
 }
 
-/* The one real call to action: a filled fjord-blue CV button */
+/* CV leads the row: accent color only, no box — quiet hierarchy */
 .link-row a.primary {
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--bg);
+  color: var(--accent);
   font-weight: 600;
-  text-decoration: none;
-  transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .link-row a.primary::after {
@@ -219,9 +214,8 @@ h1.name .dot {
 }
 
 .link-row a.primary:hover {
-  background: var(--accent-hover);
-  color: var(--bg);
-  transform: translateY(-1px);
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
 }
 
 /* ---------- sections ---------- */
