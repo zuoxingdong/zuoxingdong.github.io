@@ -25,10 +25,11 @@ bio:
 
 # Link row under the bio. Remove an entry to hide it; order is kept.
 links:
-  - label: Email
-    url: mailto:xingdong.zuo@navercorp.com
   - label: CV
     url: /cv.pdf
+    primary: true
+  - label: Email
+    url: mailto:xingdong.zuo@navercorp.com
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=Fn3Jm7wAAAAJ
   - label: GitHub

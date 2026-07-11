@@ -43,8 +43,8 @@ const renderAuthors = (authors: string[]) =>
       <h1 class="name">{profile.name}<span class="dot">.</span></h1>
       {profile.bio.map((p: string) => <p set:html={p} />)}
       <nav class="link-row">
-        {profile.links.map((l: { label: string; url: string }) => (
-          <a href={l.url}>{l.label}</a>
+        {profile.links.map((l: { label: string; url: string; primary?: boolean }) => (
+          <a href={l.url} class={l.primary ? 'primary' : undefined}>{l.label}</a>
         ))}
       </nav>
     </div>

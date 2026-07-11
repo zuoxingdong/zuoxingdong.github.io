@@ -181,23 +181,47 @@ h1.name .dot {
 .link-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.6rem;
-  margin-top: 1.5rem;
+  align-items: center;
+  gap: 0.7rem 1.25rem;
+  margin-top: 1.6rem;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
 }
 
 .link-row a {
-  padding: 0.2rem 0.7rem;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.35em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .link-row a:hover {
-  border-color: var(--accent);
-  background: var(--bg-raised);
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* The one real call to action: a filled fjord-blue CV button */
+.link-row a.primary {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.link-row a.primary::after {
+  content: ' \2193';
+  font-weight: 400;
+}
+
+.link-row a.primary:hover {
+  background: var(--accent-hover);
+  color: var(--bg);
+  transform: translateY(-1px);
 }
 
 /* ---------- sections ---------- */
