@@ -24,13 +24,11 @@ bio:
     Science at Linnaeus University, Sweden.
 
 # Link row under the bio. Remove an entry to hide it; order is kept.
-# TODO(xingdong): add a CV PDF (drop the file at public/cv.pdf and
-# uncomment the CV line).
 links:
   - label: Email
     url: mailto:xingdong.zuo@navercorp.com
-  # - label: CV
-  #   url: /cv.pdf
+  - label: CV
+    url: /cv.pdf
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=Fn3Jm7wAAAAJ
   - label: GitHub
